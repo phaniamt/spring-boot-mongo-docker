@@ -5,6 +5,7 @@ metadata:
   name: spring-deployment
   labels:
     name: springboot
+    version: ${BUILD_NUMBER}
 spec:
   replicas: 2
   selector:
@@ -23,7 +24,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: phanikumary1995/test-app
+        image: 294387193228.dkr.ecr.us-east-1.amazonaws.com/phani:app
 #        image: nginx
         imagePullPolicy: Always
         ports:
