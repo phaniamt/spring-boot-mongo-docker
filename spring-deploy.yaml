@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring-deployment
+  namespace: dev
   labels:
     name: springboot
     version: ${BUILD_NUMBER}
@@ -47,6 +48,7 @@ metadata:
   labels:
     name: springboot
   name: springboot
+  namespace: dev
 spec:
   type: NodePort
   ports:
@@ -66,6 +68,7 @@ metadata:
   labels:
     name: mongo
   name: mongo
+  namespace: dev
 spec:
   replicas: 1
   selector:
@@ -98,6 +101,7 @@ metadata:
   labels:
     name: mongo
   name: mongo
+  namespace: dev
 spec:
   type: ClusterIP
   ports:
