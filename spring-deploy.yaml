@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: 294387193228.dkr.ecr.us-east-1.amazonaws.com/phani:app
+        image: phanikumary1995/springboot-app
 #        image: nginx
         imagePullPolicy: Always
         ports:
