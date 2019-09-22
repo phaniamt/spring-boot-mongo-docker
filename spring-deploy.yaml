@@ -29,6 +29,13 @@ spec:
         image: phanikumary1995/springboot-app
 #        image: nginx
         imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "200Mi"
+            cpu: "0.5"
+          limits: 
+            memory: "200Mi"
+            cpu: "0.5"
         ports:
         - containerPort: 8080
         readinessProbe:
